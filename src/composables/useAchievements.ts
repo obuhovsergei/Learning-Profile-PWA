@@ -1,7 +1,7 @@
 import { storeToRefs } from 'pinia';
 import { useAchievementStore } from '@/stores/achievement';
 import { onMounted, onUnmounted } from "vue";
-import type { Achievement } from "@models/user";
+import type { Achievement } from "@/models/user";
 
 export default function useAchievements() {
     const achievementStore = useAchievementStore();

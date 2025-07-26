@@ -1,11 +1,10 @@
 /// <reference lib="webworker" />
 
-declare const self: ServiceWorkerGlobalScope
+const _self = self as unknown as ServiceWorkerGlobalScope;
+const CACHE_NAME = 'learning-profile-cache-v1';
+const OFFLINE_PAGE = '/offline';
 
-const CACHE_NAME = 'learning-profile-cache-v1'
-const OFFLINE_PAGE = '/offline'
-
-self.addEventListener('install', (event) => {
+_self.addEventListener('install', (event: ExtendableEvent) => {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then((cache) => {
@@ -13,20 +12,34 @@ self.addEventListener('install', (event) => {
                     OFFLINE_PAGE,
                     '/',
                     '/src/assets/logo.svg'
-                ])
+                ]);
             })
-    )
-})
+    );
+});
 
-self.addEventListener('fetch', (event) => {
+_self.addEventListener('fetch', (event: FetchEvent) => {
     if (event.request.mode === 'navigate') {
         event.respondWith(
             fetch(event.request)
-                .catch(() => caches.match(OFFLINE_PAGE)))
-    }
-    else {
+                .catch(() => caches.match(OFFLINE_PAGE)
+                    .then(response => response || new Response('Offline', {
+                        status: 200,
+                        statusText: 'OK',
+                        headers: new Headers({
+                            'Content-Type': 'text/html'
+                        })
+                    }))
+                )
+        );
+    } else {
         event.respondWith(
             fetch(event.request)
-                .catch(() => caches.match(event.request)))
+                .catch(() => caches.match(event.request)
+                    .then(response => response || new Response('Not found in cache', {
+                        status: 404,
+                        statusText: 'Not Found'
+                    }))
+                )
+        );
     }
-})
+});

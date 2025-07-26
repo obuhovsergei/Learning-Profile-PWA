@@ -10,8 +10,7 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@mocks": ["./src/mocks/index.ts"]
+      "@/*": ["./src/*"]
     },
     "types": ["vite/client", "node", "vue"]
   },

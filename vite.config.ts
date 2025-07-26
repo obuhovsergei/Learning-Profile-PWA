@@ -105,12 +105,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '@components': fileURLToPath(new URL('./src/components', import.meta.url)),
-      '@stores': fileURLToPath(new URL('./src/stores', import.meta.url)),
-      '@views': fileURLToPath(new URL('./src/views', import.meta.url)),
-      '@mocks': fileURLToPath(new URL('./src/mocks/index.ts', import.meta.url)),
-      '@models': fileURLToPath(new URL('./src/models', import.meta.url))
+      "@": fileURLToPath(new URL("./src", import.meta.url))
     }
   },
   define: {
@@ -151,7 +146,7 @@ export default defineConfig({
     },
     rollupOptions: {
       external: [
-        /@primeuix\/themes/
+        /@primevue\/core/, '@primevue/core/basecomponent'
       ]
     }
   }

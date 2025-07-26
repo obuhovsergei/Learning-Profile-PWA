@@ -9,4 +9,4 @@ export const mockUser: User = {
     nextLevelXp: 1000,
     completedCourses: 7,
     skills: ["JavaScript", "Vue.js", "TypeScript", "HTML", "CSS", "Git"]
-}  as const
+}

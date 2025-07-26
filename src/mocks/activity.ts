@@ -1,4 +1,4 @@
-import { Activity } from "../models/user";
+import { Activity } from "@/models/user";
 
 export const mockActivities: Activity[] = [
     { id: 1, course: "Vue Advanced", date: "2023-05-15", xp: 50 },
@@ -21,4 +21,4 @@ export const mockActivities: Activity[] = [
     { id: 18, course: "Webpack Configuration", date: "2023-02-12", xp: 50 },
     { id: 19, course: "REST API Design", date: "2023-02-05", xp: 60 },
     { id: 20, course: "Career Growth", date: "2023-01-30", xp: 20 }
-] as const
+]

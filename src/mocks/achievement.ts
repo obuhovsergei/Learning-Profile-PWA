@@ -45,4 +45,4 @@ export const mockAchievements: Achievement[] = [
         unlocked: true,
         date: '2023-06-10'
     }
-] as const
+]

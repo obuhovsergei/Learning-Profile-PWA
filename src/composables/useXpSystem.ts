@@ -1,5 +1,5 @@
 import { computed } from "vue";
-import type { User } from "@models/user";
+import type { User } from "@/models/user";
 
 export default function useXpSystem(userData: User) {
     const xpToNextLevel = computed(() => {

@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
-import { mockAchievements } from '@mocks';
+import { mockAchievements } from '../mocks';
 
 export const useAchievementStore = defineStore('achievement', () => {
     const achievements = ref<typeof mockAchievements>([])

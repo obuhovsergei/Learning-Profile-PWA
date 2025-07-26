@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
-import { mockActivities } from '@mocks';
+import { mockActivities } from '../mocks';
 
 export const useActivityStore = defineStore('activity', () => {
     const activities = ref<typeof mockActivities>([])

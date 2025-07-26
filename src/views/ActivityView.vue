@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
 import { useActivityStore } from '@/stores/activity'
-import ActivityCard from "@components/ActivityCard.vue"
+import ActivityCard from "@/components/ActivityCard.vue"
 import VirtualScroller from 'primevue/virtualscroller'
 import {onMounted, onUnmounted} from 'vue'
 

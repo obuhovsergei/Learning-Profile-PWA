@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { mockUser } from '@mocks'
+import { mockUser } from '../mocks'
 import { ref } from 'vue'
 
 export const useUserStore = defineStore('user', () => {

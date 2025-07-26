@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Activity } from "@models/user";
+import type { Activity } from "@/models/user";
 
 const props = defineProps<{
   activity: Activity
