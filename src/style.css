@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+}
+
+/* Базовые цвета для скелетонов */
+.bg-gray-300 {
+    background-color: #e5e7eb;
+}
+
+.surface-100 {
+    background-color: #f8f9fa;
+}

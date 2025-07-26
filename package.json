@@ -1,0 +1,37 @@
+{
+  "name": "learning-profile",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:prod": "vue-tsc -b && vite build --mode production",
+    "preview": "vite preview",
+    "prebuild": "vue-tsc -b",
+    "build:pwa": "vite build --mode production",
+    "preview:pwa": "vite preview --host --port 4173"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.0",
+    "@primeuix/themes": "^1.2.1",
+    "@vitejs/plugin-vue": "4.3.4",
+    "pinia": "2.3.1",
+    "primeflex": "^3.3.1",
+    "primeicons": "^5.0.0",
+    "primevue": "^4.3.6",
+    "typescript": "5.1.6",
+    "vite": "4.4.11",
+    "vue": "3.5.18",
+    "vue-router": "^4.5.1",
+    "vue-tsc": "1.8.27"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@vue/compiler-sfc": "3.5.18",
+    "@vue/tsconfig": "^0.4.0",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-pwa": "^1.0.2",
+    "vite-tsconfig-paths": "^4.2.0"
+  }
+}
