@@ -3,7 +3,7 @@ import { storeToRefs } from 'pinia'
 import { useActivityStore } from '@/stores/activity'
 import ActivityCard from "@/components/ActivityCard.vue"
 import VirtualScroller from 'primevue/virtualscroller'
-import {onMounted, onUnmounted} from 'vue'
+import { onMounted, onUnmounted } from 'vue'
 
 const activityStore = useActivityStore()
 const { activities, isActivitiesLoading } = storeToRefs(activityStore)

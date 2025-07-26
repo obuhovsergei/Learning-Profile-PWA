@@ -142,11 +142,12 @@ export default defineConfig({
     },
     commonjsOptions: {
       include: [/node_modules/, /primevue/],
-      extensions: ['.js', '.mjs']
+      extensions: ['.js', '.mjs'],
+      transformMixedEsModules: true
     },
     rollupOptions: {
       external: [
-        /@primevue\/core/, '@primevue/core/basecomponent'
+        /@primevue\/core/, /@primevue\/core\basecomponent/
       ]
     }
   }

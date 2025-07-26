@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import Menubar from 'primevue/menubar'
 import { RouteNames } from "@/router/routerNames";
 import PWAInstallPrompt from '@/components/PWAInstallPrompt.vue'
-import {useRouter} from "vue-router";
+import { useRouter } from "vue-router";
 
 const menuItems = ref([
   {
