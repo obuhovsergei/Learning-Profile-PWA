@@ -42,7 +42,6 @@ const { isAchievementsLoading, achievements, formatDate, calculateProgress } = u
             >
               <div
                   class="w-16 h-16 mx-auto mb-3 flex align-items-center justify-content-center border-circle"
-                  :class="achievement.unlocked ? 'bg-primary-100' : 'bg-gray-100'"
               >
                 <i class="text-3xl" :class="achievement.unlocked ? achievement.icon : 'pi pi-lock text-gray-400'"/>
               </div>

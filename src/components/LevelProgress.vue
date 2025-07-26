@@ -17,7 +17,7 @@ const { xpToNextLevel, progressPercentage } = useXpSystem(props.userData);
       <span class="font-medium">Уровень {{ props.userData.level }}</span>
       <span class="font-medium">{{ props.userData.xp }} / {{ props.userData.nextLevelXp }} XP</span>
     </div>
-    <div class="h-2rem bg-gray-200 border-round overflow-hidden">
+    <div class="bg-gray-200 border-round overflow-hidden">
       <ProgressBar :value="progressPercentage" aria-label="Progress"></ProgressBar>
     </div>
     <div class="mt-2 text-500 text-sm">

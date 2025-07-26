@@ -32,9 +32,9 @@ onMounted(() => {
 })
 
 const updateOnlineStatus = () => {
-  isOnline.value = navigator.onLine
-  if (!isOnline.value) {
-    router.push('/offline')
+  isOnline.value = navigator.onLine;
+  if (!isOnline.value && router.currentRoute.value.name !== RouteNames.offline) {
+    router.push({ name: RouteNames.offline });
   }
 }
 

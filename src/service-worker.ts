@@ -18,6 +18,11 @@ _self.addEventListener('install', (event: ExtendableEvent) => {
 });
 
 _self.addEventListener('fetch', (event: FetchEvent) => {
+    // Пропускаем запросы, которые не являются GET или навигационными
+    if (event.request.method !== 'GET') {
+        return;
+    }
+
     if (event.request.mode === 'navigate') {
         event.respondWith(
             fetch(event.request)

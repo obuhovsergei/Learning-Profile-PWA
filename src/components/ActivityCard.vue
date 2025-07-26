@@ -12,7 +12,7 @@ const formatDate = (dateString: string) => {
 
 
 <template>
-  <div class="p-4 border-bottom-1 surface-border hover:surface-hover transition-colors">
+  <div class="p-4 border-bottom-1 surface-border transition-colors">
     <div class="flex justify-content-between align-items-center">
       <div>
         <h4 class="font-medium m-0">{{ activity.course }}</h4>

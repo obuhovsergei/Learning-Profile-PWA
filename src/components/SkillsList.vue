@@ -13,7 +13,7 @@ const props = defineProps<{
       <span
           v-for="skill in userData.skills"
           :key="skill"
-          class="bg-primary-100 text-primary-800 border-round py-1 text-sm font-medium"
+          class="text-primary-800 border-round py-1 text-sm font-medium"
       >
         {{ skill }}
       </span>
